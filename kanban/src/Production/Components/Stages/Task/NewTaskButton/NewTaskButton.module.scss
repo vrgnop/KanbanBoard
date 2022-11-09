@@ -1,0 +1,54 @@
+@import "../../../../SCSS/variables";
+@import "../../../../SCSS/app";
+
+//.button {
+//  button {
+//    @extend %button;
+//    margin-top: 5px;
+//    background-color: $background;
+//    color: $gray-blue;
+//    width: 100%;
+//  }
+//
+//}
+
+
+
+.wrapper {
+  margin-top: 5px;
+  width: 100%;
+
+  button {
+    margin-top: 5px;
+    text-align: left;
+    @extend %button;
+    box-shadow: none;
+    &.add {
+      margin-right: 5px;
+      background-color: $background;
+      color: $gray-light;
+    }
+    &.cancel {
+      background: $gray-light;
+      color: $black;
+    }
+  }
+
+  textarea {
+    cursor: pointer;
+    margin-top: 5px;
+    width: 94%;
+    overflow: hidden;
+    padding: 3%;
+    border: none;
+    outline: none;
+    height: auto;
+    background: $gray-light;
+
+    &:focus {
+      cursor: text;
+      border: none;
+      outline: none;
+    }
+  }
+}

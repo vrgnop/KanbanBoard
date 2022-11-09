@@ -1,0 +1,88 @@
+@import "variables";
+
+body {
+  font-family: Roboto;
+  background: $background;
+  color: $black;
+  overflow: hidden;
+  height: 100vh;
+  p {
+    font-family: Roboto;
+    font-size: 16px;
+  }
+  button {
+    font-size: 18px;
+  }
+  output {
+    font-size: 16px;
+  }
+  textarea {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    overflow-y: scroll;
+  }
+
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+h1 {
+  color: $gray-light;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+%button {
+  padding: 5px 15px;
+  box-shadow: $shadow;
+  border-radius: $radius;
+  &[disabled] {
+    cursor: inherit;
+    opacity: 0.5;
+  }
+}
+
+%scroll {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+    background: $gray-light;
+    box-shadow: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: $gray-dark;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    background-color: #f9f9fd;
+  }
+}
+
+textarea {
+  resize: none;
+  font-family: "Roboto";
+  border-radius: $radius;
+  &:focus {
+    border: 1px solid $background;
+  }
+}
+

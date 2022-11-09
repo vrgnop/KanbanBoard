@@ -1,0 +1,52 @@
+@import "../../SCSS/variables";
+@import "../../SCSS/app";
+
+.wrapper {
+  width: 20%;
+  padding: 10px;
+  background-color: $gray-blue;
+  border-radius: $radius-10;
+  height: fit-content;
+  min-height: 100px;
+
+  .scroll {
+    &::-webkit-scrollbar {
+      margin-right: -5px;
+      width: 10px;
+      border-radius: 5px;
+      background: $gray-light;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: $gray-dark;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 5px;
+      background-color: $gray-light;
+    }
+  }
+
+  .stage {
+    font-size: 25px;
+    padding-bottom: 15px;
+  }
+  .tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    max-height: 58vh;
+    @extend %scroll
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: -webkit-fill-available;
+    margin: 20px 0px;
+    height: fit-content;
+    min-height: auto;
+  }
+}

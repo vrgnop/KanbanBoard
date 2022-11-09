@@ -1,0 +1,78 @@
+//@import "../../SCSS/variables";
+//@import "../../SCSS/app";
+//
+//.wrapper {
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  position: relative;
+//  margin-top: 5px;
+//  .button {
+//    background-color: $gray-light;
+//    width: 100%;
+//    @extend %button
+//  }
+//  .close {
+//    display: flex;
+//    justify-content: right;
+//    div {
+//        border: solid $black;
+//        border-width: 0 1px 1px 0;
+//        display: inline-block;
+//        margin-bottom: 5px;
+//        padding: 5px;
+//        transform: rotate(45deg);
+//        -webkit-transform: rotate(45deg);
+//        transition: all 100ms;
+//      }
+//  }
+//
+//  .open {
+//    text-align: left;
+//  }
+//  ul {
+//    top: 24px;
+//    width: 100%;
+//    padding-left: 0;
+//    position: absolute;
+//    box-shadow: $shadow;
+//    border-radius: $radius;
+//    max-height: 150px;
+//    display: flex;
+//    flex-direction: column;
+//    background-color: $gray-light;
+//    overflow-x: hidden;
+//    overflow-y:scroll;
+//
+//    &::-webkit-scrollbar {
+//      width: 10px;
+//      border-radius: 5px;
+//      background: $gray-light;
+//    }
+//
+//    &::-webkit-scrollbar-thumb {
+//      border-radius: 5px;
+//      background-color: rgba(92, 136, 241, 0.5);
+//    }
+//
+//    &::-webkit-scrollbar-track {
+//      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+//      border-radius: 5px;
+//      background-color: #f9f9fd;
+//    }
+//  }
+//
+//
+//  li {
+//    width: inherit;
+//    list-style-type: none;
+//    button {
+//      width: 100%;
+//      padding: 10px;
+//      text-align: left;
+//    }
+//    :hover {
+//      background-color: $gray-blue;
+//    }
+//    }
+//}

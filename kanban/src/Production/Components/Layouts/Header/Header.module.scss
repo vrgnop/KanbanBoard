@@ -1,0 +1,55 @@
+@import "../../../SCSS/variables";
+
+.wrapper {
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: $blue-dark;
+  padding: 5px 20px;
+  align-items: center;
+
+  .profileButton {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+
+    img {
+      display: block;
+      background-color: #f6f6f6;
+      border-radius: 50px;
+      width: 50px;
+      margin: 5px;
+    }
+    button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    .arrowButton {
+      border: solid $gray-light;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      margin: 5px;
+      padding: 5px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transition: all 100ms;
+    }
+    .active {
+      transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    padding: 10px 40px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+}
+

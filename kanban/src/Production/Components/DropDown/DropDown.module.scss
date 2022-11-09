@@ -1,0 +1,63 @@
+@import "../../SCSS/variables";
+@import "../../SCSS/app";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 5px;
+  .button {
+    width: 100%;
+    box-shadow: none;
+    @extend %button;
+    padding: 10px;
+  }
+  .close {
+    display: flex;
+    justify-content: right;
+    background-color: $gray-light;
+    div {
+      border: solid $black;
+      border-width: 0 1px 1px 0;
+      display: inline-block;
+      margin-bottom: 5px;
+      padding: 5px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transition: all 100ms;
+    }
+  }
+
+  .open {
+    text-align: left;
+  }
+  ul {
+    top: 24px;
+    width: 100%;
+    padding-left: 0;
+    position: absolute;
+    box-shadow: $shadow;
+    border-radius: $radius;
+    max-height: 150px;
+    display: flex;
+    flex-direction: column;
+    background-color: $gray-light;
+    overflow-x: hidden;
+    @extend %scroll
+    }
+
+
+  li {
+    width: inherit;
+    list-style-type: none;
+    button {
+      width: 100%;
+      padding: 10px;
+      text-align: left;
+      &:hover {
+        background-color: $gray-blue;
+      }
+    }
+  }
+}

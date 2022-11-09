@@ -1,0 +1,16 @@
+@import "../../../SCSS/variables";
+@import "../../../SCSS/app";
+.button {
+  width: 100%;
+  margin: 5px;
+
+  button {
+   text-align: left;
+    width: 100%;
+    @extend %button;
+    border-bottom: 2px solid rgba(30, 73, 157, 0.2);
+    height: auto;
+    padding: 10px;
+    background-color: $gray-light;
+  }
+}
