@@ -4,7 +4,7 @@ import "./App.css";
 import Desk from "./Production/Pages/Desk/Desk";
 import "./Production/SCSS/app.scss";
 import PopupTask from "./Production/Pages/PopupTask/PopupTask";
-import NotFound from "./Production/Pages/NotFound";
+import NotFound from "./Production/Pages/NotFound/NotFound";
 
 function App() {
   return (

@@ -1,0 +1,13 @@
+@import "../../SCSS/variables";
+@import "../../SCSS/app";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  button {
+    font-size: 20px;
+    background: $gray-blue;
+    @extend %button;
+  }
+}
