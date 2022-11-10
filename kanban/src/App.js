@@ -4,6 +4,7 @@ import "./App.css";
 import Desk from "./Production/Pages/Desk/Desk";
 import "./Production/SCSS/app.scss";
 import PopupTask from "./Production/Pages/PopupTask/PopupTask";
+import NotFound from "./Production/Pages/NotFound";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Route path={"/"} element={<Desk />}>
         <Route path={"/task/:id"} element={<PopupTask />} />
       </Route>
+      <Route path={"*"} element={<NotFound />} />
     </Routes>
   );
 }
