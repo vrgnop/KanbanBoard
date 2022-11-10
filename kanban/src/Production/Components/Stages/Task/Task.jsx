@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./Task.module.scss";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Task({ title, id }) {
+  const navigate = useNavigate();
   return (
-    <Link className={styles.button} to={"task/" + id}>
-      <button>{title}</button>
-    </Link>
+    <button className={styles.button} onClick={() => navigate("task/" + id)}>
+      {title}
+    </button>
   );
 }
 

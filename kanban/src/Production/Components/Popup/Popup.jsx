@@ -1,10 +1,11 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./Popup.module.scss";
 
 //Компонент обертка для создания попапа
 
 function PopupTask(props) {
+  const navigate = useNavigate();
   const popupRef = React.useRef();
   //Блокировка скролла при открытии попапа на мобилке
   React.useEffect(() => {
@@ -17,16 +18,13 @@ function PopupTask(props) {
     }
   }, []);
 
+  const onClickClosePopup = () => navigate("/");
+
   return (
-    <div ref={popupRef} className={styles.wrapper}>
-      <Link to={"/"}>
-        <div className={styles.background}></div>
-      </Link>
-      <div className={styles.task}>
+    <div onClick={onClickClosePopup} ref={popupRef} className={styles.wrapper}>
+      <div onClick={(e) => e.stopPropagation()} className={styles.task}>
         {props.children}
-        <Link to={"/"}>
-          <button className={styles.close}></button>
-        </Link>
+        <button onClick={onClickClosePopup} className={styles.close}></button>
       </div>
     </div>
   );
